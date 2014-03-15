@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta  charset="UTF-8">
+	<title>AngryBirds</title>
+	<script  type="text/javascript"  src="scripts/Box2dWeb-2.1.a.3.min.js"></script>
+	<script  type="text/javascript"  src="scripts/lufylegend-1.8.6.min.js"></script>
+	<script  type="text/javascript"  src="scripts/Bird.js"></script>
+	<script  type="text/javascript"  src="scripts/Pig.js"></script>
+	<script  type="text/javascript"  src="scripts/Stage.js"></script>
+	<script  type="text/javascript"  src="scripts/RemoveObject.js"></script>
+	<script  type="text/javascript"  src="scripts/Main.js"></script>
+	<script  type="text/javascript">
+if(LGlobal.canTouch){
+	LGlobal.stageScale = LStageScaleMode.EXACT_FIT;
+	LSystem.screen(LStage.FULL_SCREEN);
+}
+function doScroll() {
+	if(window.pageYOffset === 0) {
+		window.scrollTo(0, 1);
+	}
+}
+window.onload = function() {
+	setTimeout(doScroll, 100);
+	init(10,"mylegend",1000,480,main,LEvent.INIT);// 调用init函数，初始化lufylegend库件。
+}
+window.onorientationchange = function() {
+	setTimeout(doScroll, 100);
+};
+window.onresize = function() {
+	setTimeout(doScroll, 100);
+}
+</script>
+	<script>window["_GOOG_TRANS_EXT_VER"] = "1";</script>
+</head>
+<body>
+	<div  id="mylegend">
+		<!-- 自动生成的 -->
+		<div  style="position:absolute;margin:0px 0px 0px 0px;overflow:visible;-webkit-transform:translateZ(0);z-index:0;">
+			<canvas  id="mylegend_canvas"  style="margin:0px 0px 0px 0px;width:1000px;height:480px;"  width="1000"  height="480">
+				<div  id="noCanvas">
+					<p>
+						Hey there,it looks like you're using Microsoft's Internet Explorer. Microsoft hates the Web and doesn't support HTML5:(
+					</p>
+				</div>
+			</canvas>
+		</div>
+		<div  id="mylegend_InputText"  style="position:absolute;margin:0px 0px 0px 0px;z-index:10;display:none;">
+			<textarea  rows="1"  id="mylegend_InputTextBox"></textarea>
+			<input  type="password"  id="mylegend_passwordBox"></div>
+	</div>
+
+</body>
+</html>

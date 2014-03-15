@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <title>AngryBirds</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <div id="content">
+        <div id="begin">
+            <ul>
+                <li class="play"></li>
+                <li class="allHurdle"></li>
+            </ul>
+        </div>
+        <div id="menu">
+            <ul>
+                <li class="hurdle1"></li>
+                <li class="hurdle2"></li>
+                <li class="hurdle3"></li>
+                <li class="hurdle4"></li>
+                <li class="hurdle5"></li>
+                <li class="hurdle6"></li>
+                <li class="hurdle7"></li>
+                <li class="hurdle8"></li>
+            </ul>
+        </div>
+        <div id="gameWin">
+            <ul>
+                <li class="replay"></li>
+                <li class="allHurdle"></li>
+                <li class="next"></li>
+            </ul>
+        </div>
+        <div id="gameLose">
+            <ul>
+                <li class="replay"></li>
+                <li class="allHurdle"></li>
+            </ul>
+        </div>
+        <div id="mylegend">
+            <!-- 自动生成的 -->
+        </div>
+    </div>
+
+    <!--相关js文件-->
+    <script type="text/javascript" src="scripts/Box2dWeb-2.1.a.3.min.js"></script>
+    <script type="text/javascript" src="scripts/lufylegend-1.8.6.min.js"></script>
+    <script type="text/javascript" src="scripts/Bird.js"></script>
+    <script type="text/javascript" src="scripts/Pig.js"></script>
+    <script type="text/javascript" src="scripts/Stage.js"></script>
+    <script type="text/javascript" src="scripts/RemoveObject.js"></script>
+    <script id="main" type="text/javascript" src="scripts/Main_simple.js"></script>
+    <script type="text/javascript" src="scripts/chapater.js"></script>
+    <script type="text/javascript">
+        if(LGlobal.canTouch){
+        	LGlobal.stageScale = LStageScaleMode.EXACT_FIT;
+        	LSystem.screen(LStage.FULL_SCREEN);
+        }
+        function doScroll() {
+        	if(window.pageYOffset === 0) {
+        		window.scrollTo(0, 1);
+        	}
+        }
+        window.onload = function() {
+        	setTimeout(doScroll, 100);
+        	init(10,"mylegend",1000,480,main,LEvent.INIT);// 调用init函数，初始化lufylegend库件。
+        }
+        window.onorientationchange = function() {
+        	setTimeout(doScroll, 100);
+        };
+        window.onresize = function() {
+        	setTimeout(doScroll, 100);
+        }
+    </script>
+    <script type="text/javascript">
+        window["_GOOG_TRANS_EXT_VER"] = "1";
+    </script>
+</body>
+
+</html>

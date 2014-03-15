@@ -1,0 +1,73 @@
+#content {
+    width: 1005px;
+    margin: 0 auto;
+}
+#begin {
+    position: absolute;
+    width: 1000px;
+    height: 480px;
+    background: rgba(255, 255, 255, 0.6);
+    z-index: 4;
+    display: none;
+}
+#gameWin {
+    position: absolute;
+    width: 1000px;
+    height: 480px;
+    background: rgba(255, 255, 255, 0.6);
+    z-index: 4;
+    display: none;
+}
+#gameLose {
+    position: absolute;
+    width: 1000px;
+    height: 480px;
+    background: rgba(255, 255, 255, 0.6);
+    z-index: 4;
+    display: none;
+}
+#gameWin > ul {
+    list-style: none;
+    padding: 100px 270px;
+}
+#gameWin > ul > li {
+    float: left;
+    width: 200px;
+    height: 200px;
+    background: red;
+    margin: 0 5px;
+    cursor: pointer;
+}
+#gameLose > ul {
+    list-style: none;
+    padding: 100px 270px;
+}
+#gameLose > ul > li {
+    float: left;
+    width: 200px;
+    height: 200px;
+    background: red;
+    margin: 0 5px;
+    cursor: pointer;
+    /*  图标  */
+    background-image: url("../images/bg2.png");
+}
+#menu {
+    position: absolute;
+    width: 1000px;
+    height: 480px;
+    background: rgba(255, 255, 255, 0.6);
+    z-index: 4;
+    display: none;
+}
+#menu > ul {
+    list-style: none;
+}
+#menu > ul > li {
+    float: left;
+    width: 100px;
+    height: 100px;
+    background: red;
+    margin: 0 5px;
+    cursor: pointer;
+}
